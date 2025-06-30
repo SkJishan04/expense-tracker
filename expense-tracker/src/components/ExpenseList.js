@@ -1,6 +1,6 @@
 import React from "react";
 
-function ExpenseList({ expenses, onDelete }) {
+function ExpenseList({ expenses, onDelete, onEdit }) {
   return (
     <div className="expense-list">
       <h2>Expenses</h2>
@@ -10,11 +10,15 @@ function ExpenseList({ expenses, onDelete }) {
           <div>
             <strong>{exp.title}</strong> - ₹{exp.amount} | {exp.category} | {exp.date}
           </div>
-          <button onClick={() => onDelete(exp.id)}>Delete</button>
+          <div>
+            <button onClick={() => onEdit(exp)}>Edit</button>
+            <button onClick={() => onDelete(exp.id)}>Delete</button>
+          </div>
         </div>
       ))}
     </div>
   );
 }
+
 
 export default ExpenseList;

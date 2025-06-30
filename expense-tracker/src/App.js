@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import ExpenseForm from "./components/ExpenseForm";
+import ExpenseList from "./components/ExpenseList";
+import ExpenseChart from "./components/ExpenseChart";
+import "./styles/styles.css";
 
 function App() {
+  const [expenses, setExpenses] = useState([]);
+
+  useEffect(() => {
+    const data = localStorage.getItem("expenses");
+    if (data) setExpenses(JSON.parse(data));
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("expenses", JSON.stringify(expenses));
+  }, [expenses]);
+
+  const addExpense = (expense) => {
+    setExpenses([expense, ...expenses]);
+  };
+
+  const deleteExpense = (id) => {
+    setExpenses(expenses.filter((e) => e.id !== id));
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <h1>💰 Expense Tracker</h1>
+      <ExpenseForm onAdd={addExpense} />
+      <ExpenseChart expenses={expenses} />
+      <ExpenseList expenses={expenses} onDelete={deleteExpense} />
     </div>
   );
 }

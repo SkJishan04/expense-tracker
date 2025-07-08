@@ -2,7 +2,6 @@ Sure! Here's a fully detailed `README.md` file for your **Expense Tracker** proj
 
 ---
 
-````markdown
 # 💸 Expense Tracker App
 
 A modern, responsive full-stack Expense Tracker application built with **React.js** and **Node.js (Express)**. Easily manage your personal expenses, view insightful dashboards, generate reports in **PDF/Excel**, and visualize spending trends with interactive charts.
@@ -56,9 +55,7 @@ A modern, responsive full-stack Expense Tracker application built with **React.j
 ```bash
 git clone https://github.com/yourusername/expense-tracker-app.git
 cd expense-tracker-app
-````
 
----
 
 ### 📦 Install Dependencies
 

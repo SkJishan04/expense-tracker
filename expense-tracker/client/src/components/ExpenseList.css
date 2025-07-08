@@ -1,0 +1,59 @@
+/* src/components/ExpenseList.css */
+
+.expense-list-wrapper {
+  margin-top: 2rem;
+}
+
+.expense-list {
+  list-style: none;
+  padding: 0;
+}
+
+.expense-item {
+  background: #f3f4f6;
+  border-left: 5px solid #94a3b8;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s ease;
+}
+
+.expense-item:hover {
+  background: #e5e7eb;
+}
+
+.expense-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.expense-icon {
+  font-size: 1.5rem;
+}
+
+.expense-right {
+  text-align: right;
+}
+
+.expense-amount {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.delete-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}

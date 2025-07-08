@@ -1,0 +1,105 @@
+/* src/components/MonthlyReport.css */
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  margin: 2rem auto;
+  max-width: 500px;
+}
+
+.monthly-report {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 1000px;
+  margin: 2rem auto;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.report-header h2 {
+  font-size: 1.5rem;
+  color: #1e293b;
+}
+
+.report-header button {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.report-header button:hover {
+  background-color: #dc2626;
+}
+
+.selectors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.selectors select,
+.selectors input {
+  padding: 0.6rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  flex: 1 1 200px;
+}
+
+.report-card {
+  background: #f1f5f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  color: #1e293b;
+}
+
+.report-card p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.chart h4 {
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #334155;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .charts {
+    grid-template-columns: 1fr;
+  }
+
+  .report-header,
+  .selectors {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .report-header button {
+    align-self: flex-end;
+  }
+}

@@ -17,7 +17,7 @@ function App() {
   const [showReport, setShowReport] = useState(false);
   const [token, setToken] = useState(localStorage.getItem("token"));
   const [authMode, setAuthMode] = useState("login");
-
+  const baseUrl = import.meta.env.VITE_API_BASE_URL;
   useEffect(() => {
     if (token) {
       localStorage.setItem("token", token);
@@ -27,7 +27,7 @@ function App() {
 
   const fetchExpenses = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/expenses", {
+      const res = await fetch(`${baseUrl}/api/expenses`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await res.json();
@@ -39,7 +39,7 @@ function App() {
 
   const handleAdd = async (expense) => {
     try {
-      const res = await fetch("http://localhost:5000/api/expenses", {
+      const res = await fetch(`${baseUrl}/api/expenses`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -56,7 +56,7 @@ function App() {
 
   const handleDelete = async (id) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/expenses/${id}`, {
+      const res = await fetch(`${baseUrl}/api/expenses/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });

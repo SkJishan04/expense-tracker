@@ -5,12 +5,12 @@ function Register({ onAuth, switchToLogin }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [formError, setFormError] = useState("");
-
+  const baseUrl = import.meta.env.VITE_API_BASE_URL;
   const handleRegister = async (e) => {
     e.preventDefault();
     setFormError("");
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/register", {
+      const res = await axios.post(`${baseUrl}/api/auth/register`, {
         username,
         password,
       });

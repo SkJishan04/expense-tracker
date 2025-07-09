@@ -4,7 +4,7 @@ import ExpenseList from "./components/ExpenseList";
 import Dashboard from "./pages/Dashboard";
 import MonthlyReport from "./components/MonthlyReport";
 import jsPDF from "jspdf";
-import "jspdf-autotable";
+import autoTable from "jspdf-autotable"; 
 import * as XLSX from "xlsx";
 import { saveAs } from "file-saver";
 import Login from "./pages/Login";
@@ -67,25 +67,26 @@ function App() {
   };
 
   const exportPDF = () => {
-    const doc = new jsPDF();
-    doc.setFontSize(18);
-    doc.text("Expense Report", 14, 22);
+  const doc = new jsPDF();
+  doc.setFontSize(18);
+  doc.text("Expense Report", 14, 22);
 
-    const tableRows = expenses.map((exp) => [
-      exp.desc,
-      `$${exp.amount.toFixed(2)}`,
-      exp.category,
-      new Date(exp.date).toLocaleString(),
-    ]);
+  const tableRows = expenses.map((exp) => [
+    exp.desc,
+    `₹${exp.amount.toFixed(2)}`,
+    exp.category,
+    new Date(exp.date).toLocaleString(),
+  ]);
 
-    doc.autoTable({
-      head: [["Description", "Amount", "Category", "Date"]],
-      body: tableRows,
-      startY: 30,
-    });
+  autoTable(doc, { // ✅ use plugin like this
+    head: [["Description", "Amount", "Category", "Date"]],
+    body: tableRows,
+    startY: 30,
+  });
 
-    doc.save("expense-report.pdf");
-  };
+  doc.save("expense-report.pdf");
+};
+
 
   const exportExcel = () => {
     const worksheet = XLSX.utils.json_to_sheet(

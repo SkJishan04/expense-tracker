@@ -8,9 +8,9 @@ A modern, responsive full-stack Expense Tracker application built with **React.j
 
 ## 📸 Screenshots
 
-![Dashboard Screenshot](screenshots/dashboard.png)
-![Login Screenshot](screenshots/login.png)
-![Monthly Report Screenshot](screenshots/monthly_report.png)
+![Dashboard Screenshot](dashboard.png)
+![Login Screenshot](login.png)
+![Monthly Report Screenshot](monthly_report.png)
 
 > ℹ️ Place screenshots in the `screenshots/` folder in your repo.
 

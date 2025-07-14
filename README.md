@@ -1,6 +1,4 @@
-Sure! Here's a fully detailed `README.md` file for your **Expense Tracker** project, tailored for GitHub. It includes project description, features, tech stack, setup instructions, and contribution guidelines.
 
----
 
 # 💸 Expense Tracker App
 

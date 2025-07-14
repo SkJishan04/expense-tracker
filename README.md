@@ -150,10 +150,4 @@ If you have any feedback, issues, or feature requests:
 
 * 📧 Email: [skjishan28012004@gmail.com](mailto:skjishan28012004@gmail.com)
 * 🐦 LinkedIn: [Sk. Jishan](https://www.linkedin.com/in/sk-jishan-795127256/)
-* 
-
 ---
-
-> Made with ❤️ using React, Node & MongoDB
-
-```

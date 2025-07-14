@@ -51,7 +51,7 @@ A modern, responsive full-stack Expense Tracker application built with **React.j
 ### 🖥️ Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/expense-tracker-app.git
+git clone https://github.com/SkJishan04/expense-tracker-app.git
 cd expense-tracker-app
 
 
@@ -148,24 +148,12 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 If you have any feedback, issues, or feature requests:
 
-* 📧 Email: [yourname@example.com](mailto:yourname@example.com)
-* 🐦 Twitter: [@yourhandle](https://twitter.com/yourhandle)
-* 🌐 Portfolio: [yourportfolio.com](https://yourportfolio.com)
+* 📧 Email: [skjishan28012004@gmail.com](mailto:skjishan28012004@gmail.com)
+* 🐦 LinkedIn: [Sk. Jishan](https://www.linkedin.com/in/sk-jishan-795127256/)
+* 
 
 ---
 
 > Made with ❤️ using React, Node & MongoDB
 
-```
-
----
-
-### ✅ Notes:
-- Replace:
-  - `yourusername` with your GitHub username
-  - `your_mongodb_connection_string` and `your_super_secret_key` with your actual values
-  - Contact links with yours
-- Add screenshots to a `screenshots/` folder and update the paths
-
-Would you like me to generate this as a downloadable `.md` file for you too?
 ```
